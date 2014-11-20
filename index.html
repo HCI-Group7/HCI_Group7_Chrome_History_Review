@@ -1,0 +1,159 @@
+
+<!doctype html>
+<html>
+<head>
+    <title>Google Play's minimal tabs with CSS3 & jQuery - demo</title>
+    <link rel="stylesheet" rev="stylesheet" href="css/index_style.css" type="text/css" media="all" />
+    <link href="./css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="./css/thumb_style.css">
+    <script type="text/javascript" async="" src="./js/ga.js"></script>
+    <script src="./js/modernizr.custom.97074.js"></script>
+</head>
+<body>
+  <ul id="tabs">
+      <li><a href="#" name="#tab1">Category</a></li>
+      <li><a href="#" name="#tab2">Time Period</a></li>
+      <li><a href="#" name="#tab3">Frequency</a></li>
+  </ul>
+
+  <div id="content">
+      <div id="tab1">
+          <section>
+              <ul id="da-thumbs" class="da-thumbs">
+                  <li>
+                      <a href="http://dribbble.com/shots/505046-Menu">
+                          <img src="./image/social.jpg" width="220px" height="165px">
+                          <div style="display: block; left: 100%; top: 0px; overflow: hidden; transition: all 300ms ease; -webkit-transition: all 300ms ease;"><span>Social Network</span></div>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="http://dribbble.com/shots/504336-TN-Aquarium">
+                          <img src="./image/shopping.png" width="220px" height="165px">
+                          <div style="display: block; left: -100%; top: 0px; overflow: hidden; transition: all 300ms ease; -webkit-transition: all 300ms ease;"><span>Shopping</span></div>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="http://dribbble.com/shots/504197-Mr-Crabs">
+                          <img src="./image/news.png" width="220px" height="165px">
+                          <div style="display: block; left: 0px; top: -100%; overflow: hidden; transition: all 300ms ease; -webkit-transition: all 300ms ease;"><span>News</span></div>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="http://dribbble.com/shots/504197-Mr-Crabs">
+                          <img src="./image/others.gif" width="220px" height="165px">
+                          <div style="display: block; left: 0px; top: -100%; overflow: hidden; transition: all 300ms ease; -webkit-transition: all 300ms ease;"><span>Others</span></div>
+                      </a>
+                  </li>
+
+              </ul>
+          </section>
+      </div>
+      <div id="tab2">
+          <section>
+              <ul id="da-thumbs" class="da-thumbs">
+                  <li>
+                      <a href="http://dribbble.com/shots/505046-Menu">
+                          <img src="./image/today.png" width="220px" height="165px">
+                          <div style="display: block; left: 100%; top: 0px; overflow: hidden; transition: all 300ms ease; -webkit-transition: all 300ms ease;"><span>Today</span></div>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="http://dribbble.com/shots/504336-TN-Aquarium">
+                          <img src="./image/1day_ago.png" width="220px" height="165px">
+                          <div style="display: block; left: -100%; top: 0px; overflow: hidden; transition: all 300ms ease; -webkit-transition: all 300ms ease;"><span>One day ago</span></div>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="http://dribbble.com/shots/504197-Mr-Crabs">
+                          <img src="./image/1week_ago.png" width="220px" height="165px">
+                          <div style="display: block; left: 0px; top: -100%; overflow: hidden; transition: all 300ms ease; -webkit-transition: all 300ms ease;"><span>One week ago</span></div>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="http://dribbble.com/shots/504197-Mr-Crabs">
+                          <img src="./image/2week_ago.png" width="220px" height="165px">
+                          <div style="display: block; left: 0px; top: -100%; overflow: hidden; transition: all 300ms ease; -webkit-transition: all 300ms ease;"><span>Two weeks ago</span></div>
+                      </a>
+                  </li>
+
+              </ul>
+          </section>
+      </div>
+      <div id="tab3">
+          <section>
+              <ul id="da-thumbs" class="da-thumbs da-thumbs3">
+                  <li>
+                      <a href="http://dribbble.com/shots/505046-Menu">
+                          <img src="./image/often.png" width="220px" height="165px">
+                          <div style="display: block; left: 100%; top: 0px; overflow: hidden; transition: all 300ms ease; -webkit-transition: all 300ms ease;"><span>Often</span></div>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="http://dribbble.com/shots/504336-TN-Aquarium">
+                          <img src="./image/sometimes.png" width="220px" height="165px">
+                          <div style="display: block; left: -100%; top: 0px; overflow: hidden; transition: all 300ms ease; -webkit-transition: all 300ms ease;"><span>Sometimes</span></div>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="http://dribbble.com/shots/504197-Mr-Crabs">
+                          <img src="./image/occasionally.png" width="220px" height="165px">
+                          <div style="display: block; left: 0px; top: -100%; overflow: hidden; transition: all 300ms ease; -webkit-transition: all 300ms ease;"><span>Occasionally</span></div>
+                      </a>
+                  </li>
+              </ul>
+          </section>
+      </div>
+  </div>
+  
+  <p id="about">&nbsp;</p>
+
+<script src="js/jquery-1.7.2.min.js"></script>
+
+  <script>
+    function resetTabs(){
+        $("#content > div").hide(); //Hide all content
+        $("#tabs a").attr("id",""); //Reset id's      
+    }
+
+    var myUrl = window.location.href; //get URL
+    var myUrlTab = myUrl.substring(myUrl.indexOf("#")); // For localhost/tabs.html#tab2, myUrlTab = #tab2     
+    var myUrlTabName = myUrlTab.substring(0,4); // For the above example, myUrlTabName = #tab
+
+    (function(){
+        $("#content > div").hide(); // Initially hide all content
+        $("#tabs li:first a").attr("id","current"); // Activate first tab
+        $("#content > div:first").fadeIn(); // Show first tab content
+        
+        $("#tabs a").on("click",function(e) {
+            e.preventDefault();
+            if ($(this).attr("id") == "current"){ //detection for current tab
+             return       
+            }
+            else{             
+            resetTabs();
+            $(this).attr("id","current"); // Activate this
+            $($(this).attr('name')).fadeIn(); // Show content for current tab
+            }
+        });
+
+        for (i = 1; i <= $("#tabs li").length; i++) {
+          if (myUrlTab == myUrlTabName + i) {
+              resetTabs();
+              $("a[name='"+myUrlTab+"']").attr("id","current"); // Activate url tab
+              $(myUrlTab).fadeIn(); // Show url tab content        
+          }
+        }
+    })()
+  </script>
+
+  <script type="text/javascript" src="./js/jquery.hoverdir.js"></script>
+  <script type="text/javascript">
+      $(function() {
+
+          $(' #da-thumbs > li ').each( function() { $(this).hoverdir(); } );
+
+      });
+  </script>
+
+</body>
+</html>
