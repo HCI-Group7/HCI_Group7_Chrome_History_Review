@@ -3,11 +3,11 @@
 	list-style: none;
 	width: 984px;
 	height: 300px;
-	position: absolute;
+	position: relative;
 	top: 50%;
-	margin-top: -150px;
+	margin-top: -30px;
 	left: 50%;
-	margin-left: -492px;
+	margin-left: -500px;
 	/*margin: 20px auto;*/
 	padding: 0;
 }
@@ -16,11 +16,11 @@
 	list-style: none;
 	width: 900px;
 	height: 300px;
-	position: absolute;
+	position: relative;
 	top: 50%;
-	margin-top: -150px;
+	margin-top: -30px;
 	left: 50%;
-	margin-left: -450px;
+	margin-left: -500px;
 	/*margin: 20px auto;*/
 	padding: 0;
 }
@@ -54,7 +54,7 @@
 	overflow: hidden;
 }
 .da-thumbs li a div {
-	position: absolute;
+	position: relative;
 	background: #333;
 	background: rgba(75,75,75,0.7);
 	width: 100%;
