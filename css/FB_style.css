@@ -1,3 +1,63 @@
-body { width: 90%; margin: 100px auto 0 auto; font-family: Arial, helvetica; font-size: small; background-color: #eee; }
+body { width: 90%; margin: 10px auto 0 auto; font-family: Arial, helvetica; font-size: small; background-color: #eee; }
 /*---------------------------------*/
 
+
+.cf:before, .cf:after{
+
+	content: "";
+	display: table;
+}
+
+.cf:after{
+	clear: both;
+}
+
+.cf{
+	zoom:1;
+}
+
+/* Form wrapper styling */
+.form-wrapper{
+	width: 90%;
+	padding: 15px;
+	margin: auto;
+	background: #444;
+	background: rgba(0,0,0,.2);
+	border-radius: 10px;
+	box-shadow: 0 1px 1px rgba(0,0,0,.4) inset, 0 1px 0 rgba(255,255,255,.2);
+}
+
+/* Text font of text in the side bar */
+.text1-properties{
+	font: 'Helvetica';
+	font-size: 20px;
+	color: #FFFFFF;
+	font-style: italic;
+	font-weight: bold;
+}
+
+/* the content text properties */
+.text2-properties{
+	font: 'Helvetica';
+	font-size: 15px;
+	color: #FFFFFF;
+	font-style: normal;
+	font-weight: bold;
+}
+
+/* Submit button */
+.submit-button{
+	text-align: center;
+	position: absolute;
+	left: 50%;
+	height: 40px;
+	width: 30%;
+	margin: auto;
+	margin-left: -15%;
+	font: bold 'lucida sans', 'trebuchet MS', 'Tahoma';
+	color: #fff;
+	text-transform: uppercase;
+	background: #d83c3c;
+	border-radius: 10px;
+	text-shadow:0 -1px 0 rgba(0,0,0,.3);
+}
