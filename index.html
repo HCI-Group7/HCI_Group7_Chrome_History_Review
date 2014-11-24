@@ -1,5 +1,5 @@
 
-<!doctype html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 <head>
     <title>HCI_Group7_Chrome_History_Review</title>
@@ -7,12 +7,17 @@
     <link href="./css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css" href="./css/thumb_style.css">
 
-    <!--Menu_bubble_animation-->
-    <link rel="stylesheet" type="text/css" href="./css/menu_bubble.css">
+    <script src="js/jquery-1.7.2.min.js"></script>
     <script src="js/snap.svg-min.js"></script>
-
     <script type="text/javascript" async="" src="./js/ga.js"></script>
     <script src="./js/modernizr.custom.97074.js"></script>
+
+    <!--bootstrap-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/bootstrap-responsive.min.css" rel="stylesheet">
+    <script type="text/javascript" src="./js/bootstrap-responsive.css"></script>
+
 </head>
 <body>
   <ul id="tabs">
@@ -21,53 +26,31 @@
       <li><a href="#" name="#tab3">Frequency</a></li>
   </ul>
 
-
-  <div class="menu-wrap">
-    <nav class="menu">
-      <div class="icon-list">
-        <a href="#"><i class="fa fa-fw fa-star-o"></i><span>Favorites</span></a>
-        <a href="#"><i class="fa fa-fw fa-bell-o"></i><span>Alerts</span></a>
-        <a href="#"><i class="fa fa-fw fa-envelope-o"></i><span>Messages</span></a>
-        <a href="#"><i class="fa fa-fw fa-comment-o"></i><span>Comments</span></a>
-        <a href="#"><i class="fa fa-fw fa-bar-chart-o"></i><span>Analytics</span></a>
-        <a href="#"><i class="fa fa-fw fa-newspaper-o"></i><span>Reading List</span></a>
-      </div>
-    </nav>
-    <button class="close-button" id="close-button">Close Menu</button>
-    <div class="morph-shape" id="morph-shape" data-morph-open="M-7.312,0H15c0,0,66,113.339,66,399.5C81,664.006,15,800,15,800H-7.312V0z;M-7.312,0H100c0,0,0,113.839,0,400c0,264.506,0,400,0,400H-7.312V0z">
-      <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 100 800" preserveAspectRatio="none">
-        <path d="M-7.312,0H0c0,0,0,113.839,0,400c0,264.506,0,400,0,400h-7.312V0z"/>
-      </svg>
-    </div>
-  </div>
-
-  <button class="menu-button" id="open-button">Open Menu</button>
-
-  <div id="content">
-      <div id="tab1">
+  <div id="content" class="container">
+      <div id="tab1" style="text-align: center">
           <section>
-              <ul id="da-thumbs" class="da-thumbs">
-                  <li>
+              <ul id="da-thumbs" class="da-thumbs row">
+                  <li class="span3">
                       <a href="FB.html">
-                          <img src="./image/social.jpg" width= "200px" height= "165px">
+                          <img src="./image/social.jpg">
                           <div style="display: block; left: 100%; top: 0px; overflow: hidden; transition: all 30ms ease; -webkit-transition: all 300ms ease;"><span>Social Network</span></div>
                       </a>
                   </li>
-                  <li>
+                  <li class="span3">
                       <a href="http://dribbble.com/shots/504336-TN-Aquarium">
-                          <img src="./image/shopping.png" width="220px" height="165px">
+                          <img src="./image/shopping.png">
                           <div style="display: block; left: -100%; top: 0px; overflow: hidden; transition: all 300ms ease; -webkit-transition: all 300ms ease;"><span>Shopping</span></div>
                       </a>
                   </li>
-                  <li>
+                  <li class="span3">
                       <a href="http://dribbble.com/shots/504197-Mr-Crabs">
-                          <img src="./image/news.png" width="220px" height="165px">
+                          <img src="./image/news.png">
                           <div style="display: block; left: 0px; top: -100%; overflow: hidden; transition: all 300ms ease; -webkit-transition: all 300ms ease;"><span>News</span></div>
                       </a>
                   </li>
-                  <li>
+                  <li class="span3">
                       <a href="http://dribbble.com/shots/504197-Mr-Crabs">
-                          <img src="./image/others.gif" width="220px" height="165px">
+                          <img src="./image/others.gif">
                           <div style="display: block; left: 0px; top: -100%; overflow: hidden; transition: all 300ms ease; -webkit-transition: all 300ms ease;"><span>Others</span></div>
                       </a>
                   </li>
@@ -76,29 +59,29 @@
           </section>
       </div>
       <div id="tab2">
-          <section>
-              <ul id="da-thumbs" class="da-thumbs">
-                  <li>
+          <section class="container">
+              <ul id="da-thumbs" class="da-thumbs row">
+                  <li class="span3">
                       <a href="http://dribbble.com/shots/505046-Menu">
-                          <img src="./image/today.png" width="220px" height="165px">
+                          <img src="./image/today.png">
                           <div style="display: block; left: 100%; top: 0px; overflow: hidden; transition: all 300ms ease; -webkit-transition: all 300ms ease;"><span>Today</span></div>
                       </a>
                   </li>
-                  <li>
+                  <li class="span3">
                       <a href="http://dribbble.com/shots/504336-TN-Aquarium">
-                          <img src="./image/1day_ago.png" width="220px" height="165px">
+                          <img src="./image/1day_ago.png">
                           <div style="display: block; left: -100%; top: 0px; overflow: hidden; transition: all 300ms ease; -webkit-transition: all 300ms ease;"><span>One day ago</span></div>
                       </a>
                   </li>
-                  <li>
+                  <li class="span3">
                       <a href="http://dribbble.com/shots/504197-Mr-Crabs">
-                          <img src="./image/1week_ago.png" width="220px" height="165px">
+                          <img src="./image/1week_ago.png">
                           <div style="display: block; left: 0px; top: -100%; overflow: hidden; transition: all 300ms ease; -webkit-transition: all 300ms ease;"><span>One week ago</span></div>
                       </a>
                   </li>
-                  <li>
+                  <li class="span3">
                       <a href="http://dribbble.com/shots/504197-Mr-Crabs">
-                          <img src="./image/2week_ago.png" width="220px" height="165px">
+                          <img src="./image/2week_ago.png">
                           <div style="display: block; left: 0px; top: -100%; overflow: hidden; transition: all 300ms ease; -webkit-transition: all 300ms ease;"><span>Two weeks ago</span></div>
                       </a>
                   </li>
@@ -107,23 +90,23 @@
           </section>
       </div>
       <div id="tab3">
-          <section>
-              <ul id="da-thumbs" class="da-thumbs da-thumbs3">
-                  <li>
+          <section class="container">
+              <ul id="da-thumbs" class="da-thumbs row">
+                  <li class="span4">
                       <a href="http://dribbble.com/shots/505046-Menu">
-                          <img src="./image/often.png" width="220px" height="165px">
+                          <img src="./image/often.png">
                           <div style="display: block; left: 100%; top: 0px; overflow: hidden; transition: all 300ms ease; -webkit-transition: all 300ms ease;"><span>Often</span></div>
                       </a>
                   </li>
-                  <li>
+                  <li class="span4">
                       <a href="http://dribbble.com/shots/504336-TN-Aquarium">
-                          <img src="./image/sometimes.png" width="220px" height="165px">
+                          <img src="./image/sometimes.png">
                           <div style="display: block; left: -100%; top: 0px; overflow: hidden; transition: all 300ms ease; -webkit-transition: all 300ms ease;"><span>Sometimes</span></div>
                       </a>
                   </li>
-                  <li>
+                  <li class="span4">
                       <a href="http://dribbble.com/shots/504197-Mr-Crabs">
-                          <img src="./image/occasionally.png" width="220px" height="165px">
+                          <img src="./image/occasionally.png">
                           <div style="display: block; left: 0px; top: -100%; overflow: hidden; transition: all 300ms ease; -webkit-transition: all 300ms ease;"><span>Occasionally</span></div>
                       </a>
                   </li>
@@ -133,8 +116,6 @@
   </div>
   
   <p id="about">&nbsp;</p>
-
-<script src="js/jquery-1.7.2.min.js"></script>
 
   <script>
     function resetTabs(){
@@ -181,6 +162,7 @@
 
       });
   </script>
+
 
 <script src="js/classie.js"></script>
 <script src="js/main4.js"></script>

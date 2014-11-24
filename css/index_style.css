@@ -1,4 +1,4 @@
-body { width: 90%; margin: 100px auto 0 auto; font-family: Arial, Helvetica; font-size: small; background-color: #eee;  }
+body { width: 90%; height:100%; margin: 100px auto 0 auto; margin-top: 0;font-family: Arial, Helvetica; font-size: small; background-color: #eee;  }
 
 /* ------------------------------------------------- */
 
@@ -54,7 +54,7 @@ body { width: 90%; margin: 100px auto 0 auto; font-family: Arial, Helvetica; fon
     background: #fff;
     border-top: 2px solid #3d3d3d;
     padding: 2em;
-    height: 220px;
+    height: 100%;
 }
 
 #content h2,
