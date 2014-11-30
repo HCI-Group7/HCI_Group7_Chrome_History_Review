@@ -1,4 +1,4 @@
-body { width: 90%; margin: 10px auto 0 auto; font-family: Arial, helvetica; font-size: small; background-color: #eee; }
+body { width: 90%; margin: 10px auto 0 auto; font-family: Arial, helvetica; font-size: small; background-color: #FFFFFF; }
 /*---------------------------------*/
 
 
@@ -21,7 +21,7 @@ body { width: 90%; margin: 10px auto 0 auto; font-family: Arial, helvetica; font
 	width: 90%;
 	padding: 15px;
 	margin: auto;
-	background: #444;
+	background: #FFFFFF;
 	background: rgba(0,0,0,.2);
 	border-radius: 10px;
 	box-shadow: 0 1px 1px rgba(0,0,0,.4) inset, 0 1px 0 rgba(255,255,255,.2);
@@ -45,6 +45,32 @@ body { width: 90%; margin: 10px auto 0 auto; font-family: Arial, helvetica; font
 	font-weight: bold;
 }
 
+.image-block{
+	list-style: none;
+	width: 984px;
+	height: 300px;
+	position: relative;
+	top: 20;
+	left: 50px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 200px;
+	margin-bottom: auto;
+	padding: 0;
+	background: #FFFFFF;
+
+}
+
+.image-block li {
+	float: left;
+	margin: 10px;
+	background: #FFFFFF;
+	padding: 10px;
+	position: relative;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+	
+}
+
 /* Submit button */
 .submit-button{
 	text-align: center;
@@ -61,3 +87,24 @@ body { width: 90%; margin: 10px auto 0 auto; font-family: Arial, helvetica; font
 	border-radius: 10px;
 	text-shadow:0 -1px 0 rgba(0,0,0,.3);
 }
+
+
+.content {
+    background: #FFFFFF;
+    border-top: 2px;
+    padding: 2em;
+    height: 100%;
+
+    margin: center
+
+}
+
+
+
+
+
+
+
+
+
+
