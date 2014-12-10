@@ -2,6 +2,7 @@ body { width: 90%; margin: 10px auto 0 auto; font-family: Arial, helvetica; font
 
 /* ------------------------------------------------- */
 
+
 #tabs {
     overflow: hidden;
     width: 100%;
@@ -50,93 +51,93 @@ body { width: 90%; margin: 10px auto 0 auto; font-family: Arial, helvetica; font
 }
 
 
+
 /*---------------------------------*/
 
 
 .cf:before, .cf:after{
 
-	content: "";
-	display: table;
+    content: "";
+    display: table;
 }
 
 .cf:after{
-	clear: both;
+    clear: both;
 }
 
 .cf{
-	zoom:1;
+    zoom:1;
 }
-
 /* Form wrapper styling */
 .form-wrapper{
-	width: 90%;
-	padding: 15px;
-	margin: auto;
-	background: #FFFFFF;
-	background: rgba(0,0,0,.2);
-	border-radius: 10px;
-	box-shadow: 0 1px 1px rgba(0,0,0,.4) inset, 0 1px 0 rgba(255,255,255,.2);
+    width: 90%;
+    padding: 15px;
+    margin: auto;
+    background: #FFFFFF;
+    background: rgba(0,0,0,.2);
+    border-radius: 10px;
+    box-shadow: 0 1px 1px rgba(0,0,0,.4) inset, 0 1px 0 rgba(255,255,255,.2);
 }
 
 /* Text font of text in the side bar */
 .text1-properties{
-	font: 'Helvetica';
-	font-size: 20px;
-	color: #FFFFFF;
-	font-style: italic;
-	font-weight: bold;
+    font: 'Helvetica';
+    font-size: 20px;
+    color: #FFFFFF;
+    font-style: italic;
+    font-weight: bold;
 }
 
 /* the content text properties */
 .text2-properties{
-	font: 'Helvetica';
-	font-size: 15px;
-	color: #FFFFFF;
-	font-style: normal;
-	font-weight: bold;
+    font: 'Helvetica';
+    font-size: 15px;
+    color: #FFFFFF;
+    font-style: normal;
+    font-weight: bold;
 }
 
 .image-block{
-	list-style: none;
-	/*width: 984px;*/
-	/*height: 300px;*/
-	position: relative;
-	top: 20;
-	left: 50px;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 200px;
-	margin-bottom: auto;
-	padding: 0;
-	background: #FFFFFF;
+    list-style: none;
+    /*width: 984px;*/
+    /*height: 300px;*/
+    position: relative;
+    top: 20;
+    left: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 200px;
+    margin-bottom: auto;
+    padding: 0;
+    background: #FFFFFF;
 
 }
 
 .image-block li {
-	float: left;
-	margin: 10px;
-	background: #FFFFFF;
-	padding: 10px;
-	position: relative;
-	box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-	
+    float: left;
+    margin: 10px;
+    background: #FFFFFF;
+    padding: 10px;
+    position: relative;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+
 }
 
 /* Submit button */
 .submit-button{
-	text-align: center;
-	position: absolute;
-	left: 50%;
-	height: 40px;
-	width: 30%;
-	margin: auto;
-	margin-left: -15%;
-	font: bold 'lucida sans', 'trebuchet MS', 'Tahoma';
-	color: #fff;
-	text-transform: uppercase;
-	background: #d83c3c;
-	border-radius: 10px;
-	text-shadow:0 -1px 0 rgba(0,0,0,.3);
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    height: 40px;
+    width: 30%;
+    margin: auto;
+    margin-left: -15%;
+    font: bold 'lucida sans', 'trebuchet MS', 'Tahoma';
+    color: #fff;
+    text-transform: uppercase;
+    background: #d83c3c;
+    border-radius: 10px;
+    text-shadow:0 -1px 0 rgba(0,0,0,.3);
 }
 
 
@@ -149,13 +150,3 @@ body { width: 90%; margin: 10px auto 0 auto; font-family: Arial, helvetica; font
     margin: center
 
 }
-
-
-
-
-
-
-
-
-
-
