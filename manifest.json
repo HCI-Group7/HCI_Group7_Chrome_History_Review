@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+
+  "name": "History Review",
+  "description": "This extension used to search history records.",
+  "version": "1.0",
+
+  "permissions": [
+    "https://secure.flickr.com/",
+    "http://localhost/hci/test.php",
+    "tabs",
+    "history",
+    "storage"
+  ],
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  }
+
+
+}
