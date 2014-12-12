@@ -81,6 +81,8 @@ chrome.history.search({
 
         $("div#tab1 li#square3 a").attr("href","./SocialNetwork.html?topTab=category&contentTab=" + top3Categoryies[2]);
         $("div#tab1 li#square3 a span").html(top3Categoryies[2])
+
+        $("div#tab1 li#square4 a").attr("href","./SocialNetwork.html?topTab=category&contentTab=other&except="+top3Categoryies[0]+"|"+top3Categoryies[1]+"|"+top3Categoryies[2]);
      });
 
 

@@ -98,14 +98,15 @@ body { width: 90%; margin: 10px auto 0 auto; font-family: Arial, helvetica; font
 
 .image-block{
 	list-style: none;
+	width: 100%;;
 	/*width: 984px;*/
 	/*height: 300px;*/
-	position: relative;
-	top: 20;
-	left: 50px;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 200px;
+	position: absolute;
+	top: 50%;
+	/*left: 50px;*/
+	/*margin-left: auto;*/
+	/*margin-right: auto;*/
+	margin-top: -10%;
 	margin-bottom: auto;
 	padding: 0;
 	background: #FFFFFF;

@@ -3,7 +3,7 @@
 	<head>
 		<title>Social NewWork Result</title>
 		<link rel="stylesheet" rev="stylesheet" href="css/FB_style.css" type="text/css" media="all"/>
-
+		<script src="js/jquery-1.7.2.min.js"></script>
 		<!--Menu Button-->
 		<link rel="stylesheet" type="text/css" href="css/menu_button.css" />
 		<script src="js/snap.svg-min.js"></script>
@@ -12,7 +12,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link href="./css/bootstrap.min.css" rel="stylesheet">
 		<link href="./css/bootstrap-responsive.min.css" rel="stylesheet">
-		<script type="text/javascript" src="./js/bootstrap-responsive.css"></script>
+		<link type="text/css" src="./js/bootstrap-responsive.css"/>
+
+		<script src="./js/tldjs.js"></script>
 
 	</head>
 	<body>
@@ -59,29 +61,29 @@
 			<button class="testbutton" id="open-button">Open Menu</button>
 
 			<!--Content-->
-			<section id="content">
+			<section id="content" class="content-wrap container">
 				
-				<ul id="image-block" class="image-block">
-					<li class="span3">
+				<ul id="image-block" class="image-block row">
+					<li class="span3" id="square1">
 						<a>
-							<img id="contentFirstImage" src="./image/facebook.jpg" onclick="location.href'Shopping_Result.html'">
+							<img id="contentFirstImage" src="./image/facebook.jpg">
 							<!--<div style="display: block; left: 100%; top: 0px; overflow: hidden; transition: all 300ms ease; -webkit-transition: all 300ms ease;"><span>Today</span></div>-->
 						</a>
 					</li>
 
-					<li class="span3">
+					<li class="span3" id="square2">
 						<a href="">
 							<img id="contentSecondImage" src="./image/twitter.jpg">
 						</a>
 					</li>
 
-					<li class="span3">
+					<li class="span3" id="square3">
 						<a href="">
 							<img id="contentThirdImage" src="./image/tumblr.png" >
 						</a>
 					</li>
 
-					<li class="span3">
+					<li class="span3" id="square4">
 						<a href="">
 							<img id="contentOthersImage" src="./image/others.gif" >
 						</a>
@@ -95,42 +97,42 @@
 
 	<script src="js/classie.js"></script>
 	<script src="js/main4.js"></script>
+	<script src="js/second.js"></script>
+	<!--<script type="text/javascript">-->
 
-	<script type="text/javascript">
+		<!--function Request() {-->
+			<!--var url = document.location.href;-->
+			<!--var arrStr = url.substring(url.indexOf("?") + 1).split("&");-->
+			<!--// return arrStr;-->
+			<!--var topTab = arrStr[0];-->
+			<!--//topTab = topTab.split("=");-->
+			<!--var contentTab = arrStr[1];-->
+			<!--console.log(topTab);-->
+			<!--console.log(contentTab);-->
 
-		function Request() {
-			var url = document.location.href;
-			var arrStr = url.substring(url.indexOf("?") + 1).split("&");
-			// return arrStr;
-			var topTab = arrStr[0];
-			//topTab = topTab.split("=");
-			var contentTab = arrStr[1];
-			console.log(topTab);
-			console.log(contentTab);
-
-			// if the current page is socialnetwork result
-			if(topTab == "topTab=category" && contentTab == "contentTab=socialNetwork"){
-				console.log("change the content of this page to fit socialNetwork");
-				document.getElementById("contentFirstImage").src="./image/facebook.jpg";
-				document.getElementById("contentSecondImage").src="./image/twitter.jpg";
-				document.getElementById("contentThirdImage").src="./image/tumblr.png";
-				document.getElementById("contentOthersImage").src="./image/others.gif";
-			}else if(topTab=="topTab=category" && contentTab == "contentTab=shopping"){
-				console.log("change the content of this page to fit shopping");
-				document.getElementById("contentFirstImage").src="./image/amazon.jpg";
-				document.getElementById("contentSecondImage").src="./image/ebay.png";
-				document.getElementById("contentThirdImage").src="./image/best_buy.jpg";
-				document.getElementById("contentOthersImage").src="./image/others.gif";
-			}
-
-
+			<!--// if the current page is socialnetwork result-->
+			<!--if(topTab == "topTab=category" && contentTab == "contentTab=socialNetwork"){-->
+				<!--console.log("change the content of this page to fit socialNetwork");-->
+				<!--document.getElementById("contentFirstImage").src="./image/facebook.jpg";-->
+				<!--document.getElementById("contentSecondImage").src="./image/twitter.jpg";-->
+				<!--document.getElementById("contentThirdImage").src="./image/tumblr.png";-->
+				<!--document.getElementById("contentOthersImage").src="./image/others.gif";-->
+			<!--}else if(topTab=="topTab=category" && contentTab == "contentTab=shopping"){-->
+				<!--console.log("change the content of this page to fit shopping");-->
+				<!--document.getElementById("contentFirstImage").src="./image/amazon.jpg";-->
+				<!--document.getElementById("contentSecondImage").src="./image/ebay.png";-->
+				<!--document.getElementById("contentThirdImage").src="./image/best_buy.jpg";-->
+				<!--document.getElementById("contentOthersImage").src="./image/others.gif";-->
+			<!--}-->
 
 
-		}
 
-		Request();
 
-	</script>
+		<!--}-->
+
+		<!--Request();-->
+
+	<!--</script>-->
 
 	</body>
 </html>
