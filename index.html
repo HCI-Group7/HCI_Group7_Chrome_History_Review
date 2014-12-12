@@ -145,7 +145,11 @@
         });
 
         for (i = 1; i <= $("#tabs li").length; i++) {
+            console.log("test");
+            console.log(myUrlTab);
+            console.log(myUrlTabName);
           if (myUrlTab == myUrlTabName + i) {
+              console.log(myUrlTab);
               resetTabs();
               $("a[name='"+myUrlTab+"']").attr("id","current"); // Activate url tab
               $(myUrlTab).fadeIn(); // Show url tab content        
