@@ -248,13 +248,13 @@ function findDomainsOfFrequency(frequency){
                 }
             }else if (frequency == "sometimes") {
                 for (var key in frequencyOfDomain) {
-                    if (frequencyOfDomain[key] <= 20 && frequencyOfDomain[key] > 5) {
+                    if (frequencyOfDomain[key] <= 20 && frequencyOfDomain[key] > 3) {
                         resultDomains[key] = domains[key];
                     }
                 }
             }else if (frequency == "occasionally") {
                 for (var key in frequencyOfDomain) {
-                    if (frequencyOfDomain[key] <= 5) {
+                    if (frequencyOfDomain[key] <= 3) {
                         resultDomains[key] = domains[key];
                     }
                 }
@@ -263,9 +263,9 @@ function findDomainsOfFrequency(frequency){
             var top3Domains = findTop3Domains(resultDomains);
 
             //set contents
-            $("#square1 a").attr("href", "./ListResult.html?domain="+top3Domains[0]);
-            $("#square2 a").attr("href", "./ListResult.html?domain="+top3Domains[1]);
-            $("#square3 a").attr("href", "./ListResult.html?domain="+top3Domains[2]);
+            $("#square1 a").attr("href", "./ListResult.html?domain="+top3Domains[0]+"&frequency="+frequency);
+            $("#square2 a").attr("href", "./ListResult.html?domain="+top3Domains[1]+"&frequency="+frequency);
+            $("#square3 a").attr("href", "./ListResult.html?domain="+top3Domains[2]+"&frequency="+frequency);
         });
 
 }
