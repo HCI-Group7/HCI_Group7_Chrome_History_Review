@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -32,3 +33,125 @@
 </div>
 </body>
 </html>
+=======
+<!--<!DOCTYPE html>-->
+        <!--&lt;!&ndash;The list result page will display the history by using a foldable list&ndash;&gt;-->
+<!--<html>-->
+<!--<head lang="en">-->
+    <!--<meta charset="UTF-8">-->
+    <!--<title></title>-->
+<!--</head>-->
+<!--<body>-->
+    <!--<ul class="list">-->
+        <!--<li>-->
+            <!--<a class="list-title"></a>Today<b class="icon"></b>-->
+            <!--<ul>-->
+                <!--<li><a href="#">today result1</a> </li>-->
+                <!--<li><a href="#">today result2</a> </li>-->
+                <!--<li><a href="#">today result3</a> </li>-->
+            <!--</ul>-->
+        <!--</li>-->
+
+        <!--<li>-->
+            <!--<a class="list-title"></a>One Day Ago<b class="icon"></b>-->
+            <!--<ul>-->
+                <!--<li><a href="#">one day ago result1</a> </li>-->
+                <!--<li><a href="#">one day ago result2</a> </li>-->
+                <!--<li><a href="#">one day ago result3</a> </li>-->
+            <!--</ul>-->
+        <!--</li>-->
+
+        <!--<li>-->
+            <!--<a class="list-title"></a>One Week Ago<b class="icon"></b>-->
+            <!--<ul>-->
+                <!--<li><a href="#">one week ago result1</a> </li>-->
+                <!--<li><a href="#">one week ago result2</a> </li>-->
+                <!--<li><a href="#">one week ago result3</a> </li>-->
+            <!--</ul>-->
+        <!--</li>-->
+
+    <!--</ul>-->
+<!--</body>-->
+<!--<script type="text/javascript">-->
+
+    <!--$(document).ready(function(){-->
+        <!--$(".list-title").click(function(){   //为左边的导航条注册事件 折叠效果-->
+            <!--var parent=$(this).parent();  //寻找当前的父容器-->
+            <!--var re=parent.css("height")!="35px"?"35px":"auto";-->
+            <!--parent.css("height",re);-->
+        <!--});-->
+    <!--});-->
+<!--</script>-->
+
+<!--</html>-->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<title>List Result</title>
+<META http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name="keywords" content="HTML+CSS模板,HTML+CSS教程,HTML+CSS导航菜单,FLSH焦点图,网页特效" />
+<meta name="description" content="懒人建站为您提供-HTML+CSS模板，HTML+CSS教程，JS广告代码，HTML+CSS导航菜单，FLSH焦点图片，国外网页设计欣赏与模板和CSS技巧。" />
+<head>
+    <style type="text/css">
+        body{margin-left:10%; margin-top:40px; padding:10px;}
+        body,h2,div,span,li{font-size:12px;}
+        .title01,.title02 {color:#fff;font-weight:bold;}
+        #DoorP{border:12px solid #eee;width:80%;padding:4px;background:#fff;}
+        h2{text-align:center;margin:0px;padding:0px;line-height:22px;}
+        .title01{width:100%;height:25px;background:#99cc00;cursor:pointer;}
+        .title02{width:100%;height:25px;background:#006600;cursor:pointer;}
+        .content{
+            background:#eee;
+            border-bottom:2px solid #fff;
+            overflow:hidden;
+            color:#666;
+            padding-left:4px;
+            padding-right:4px;
+            line-height:18px;
+            font-family:"宋体";
+            width:100px;
+            height:1px;
+            display:block;}
+        .content a:link,.content a:visited{color:#666666;text-decoration:none;}
+        .content a:hover{color:#FF6600;text-decoration:underline;}
+    </style>
+</head>
+<body>
+<div id="DoorP">
+    <h2 id="listTitle1">Today</h2>
+    <div class="content"><a href="http://www.51xuediannao.com/js/nav/"> today history item1</a></div>
+    <h2 id="listTitle2">1 day ago</h2>
+    <div class="content"><a href="http://www.51xuediannao.com/HTML+CSS/"> 1 day ago history item1</a></div>
+    <h2 id="listTitle3">2 days ago</h2>
+    <div class="content"><a href="http://51xuediannao.com/JS/Slide/"> 2 days ago history item1</a></div>
+    <h2 id="listTitle4">1 week ago</h2>
+    <div class="content"><a href="http://51xuediannao.com/jiqiao/css/"> 1 week ago item1</a></div>
+    <h2 id="listTitle5">2 weeks ago</h2>
+    <div class="content"><a href="http://51xuediannao.com/jiqiao/cms/"> 2 weeks ago item1</a></div>
+</div>
+<script type="text/javascript">
+    var onum=0;
+    var closeState=new Array();
+    var ch=200;
+    function $(id){if(document.getElementById(id)){return document.getElementById(id);}else{alert("没有找到!")}}
+    function $tag(id,tagName){return $(id).getElementsByTagName(tagName)}
+    var Ds=$tag("DoorP","div");
+    var Ts=$tag("DoorP","h2");
+    if(Ds.length != Ts.length){alert("初始化失败!");}
+    function showMe(Cid,Oid){var h=parseInt(Ds[Cid].style.height);var h2=parseInt(Ds[Oid].style.height);var dH=ch;if(h>0){h=h-Math.ceil(h/3);Ds[Cid].style.height=h+"px";};if(h2<dH){h2=h2+Math.ceil((dH-h2)/3);Ds[Oid].style.height=h2+"px";};if(h<=0&&h2>=dH){clearTimeout(closeState[Cid]);return false;};closeState[Cid] = setTimeout("showMe("+Cid+","+Oid+")");}
+    for(var i=0;i<Ds.length;i++){
+        if(i==onum){Ds[i].style.height=ch+"px";Ts[i].className="title01";}else{Ds[i].style.height="0px";Ts[i].className="title02";}
+        Ts[i].value=i;
+        Ts[i].onclick=function(){if(onum==this.value){return false;};
+            Ts[onum].className="title02";
+            Ts[this.value].className="title01";
+            for(var i=0;i<closeState.length;i++){clearTimeout(closeState[i]);}
+            showMe(onum,this.value);
+            onum=this.value;
+        }
+    }
+</script>
+
+</body>
+</html>
+>>>>>>> FETCH_HEAD
