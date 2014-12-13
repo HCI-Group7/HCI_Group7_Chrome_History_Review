@@ -1,13 +1,20 @@
 /**
  * Created by Benny on 14/12/10.
  */
+
+
+var websiteImages = ["amazon.com", "bbc.com", "bestbuy.com", "cnn.com", "ebay.com", "facebook.com", "theverge.com", "tumblr.com", "twitter.com", "google.com"];
+
 function Request() {
     var url = document.location.href;
     var arrStr = url.substring(url.indexOf("?") + 1).split("&");
     // return arrStr;
     var topTab = arrStr[0];
-    //topTab = topTab.split("=");
+
+    topTab = topTab.substring(topTab.indexOf("=")+1);
     var contentTab = arrStr[1];
+    contentTab = contentTab.substring(contentTab.indexOf("=") + 1);
+    contentTab = decodeURIComponent(contentTab);
     console.log(topTab);
     console.log(contentTab);
 
@@ -25,6 +32,26 @@ function Request() {
         document.getElementById("contentThirdImage").src="./image/best_buy.jpg";
         document.getElementById("contentOthersImage").src="./image/others.gif";
     }
+
+<<<<<<< HEAD
+    // change the path list
+    if(topTab == "category"){
+        document.getElementById("topTab").innerHTML = topTab.toUpperCase();
+        document.getElementById("topTab").href = "index.html";
+    }else if(topTab == "timePeriod"){
+        document.getElementById("topTab").innerHTML = topTab.toUpperCase();
+        document.getElementById("topTab").href = "index.html#tab2";
+    }else if(topTab == "frequency"){
+        document.getElementById("topTab").innerHTML = topTab.toUpperCase();
+        document.getElementById("topTab").href = "index.html#tab3";
+    }
+
+
+
+
+    document.getElementById("contentTab").innerHTML = contentTab.toUpperCase();
+=======
+>>>>>>> FETCH_HEAD
 
 }
 
@@ -52,7 +79,7 @@ Request();
         findDomainsOfFrequency(frequency);
     }
 
-
+    setMenuItems();
 
 
 })();
@@ -97,6 +124,35 @@ function findDomainsOfCategory(category){
             $("#square1 a").attr("href", "./ListResult.html?domain="+top3Domains[0]);
             $("#square2 a").attr("href", "./ListResult.html?domain="+top3Domains[1]);
             $("#square3 a").attr("href", "./ListResult.html?domain="+top3Domains[2]);
+            $("#square4 a").attr("href", "./ListResult.html?categoryStr="+category);
+<<<<<<< HEAD
+
+            //set images
+            if($.inArray(top3Domains[0], websiteImages) != -1) {
+                $("#square1 a img").attr("src","./image/domain/"+top3Domains[0]+".png");
+            }else{
+                $("#square1 a img").attr("src","./image/domain/website.png");
+            }
+
+            if($.inArray(top3Domains[1], websiteImages) != -1) {
+                $("#square2 a img").attr("src","./image/domain/"+top3Domains[1]+".png");
+            }else{
+                $("#square2 a img").attr("src","./image/domain/website.png");
+            }
+
+            if($.inArray(top3Domains[2], websiteImages) != -1) {
+                $("#square3 a img").attr("src","./image/domain/"+top3Domains[2]+".png");
+            }else{
+                $("#square3 a img").attr("src","./image/domain/website.png");
+            }
+
+            $("#square1 a div").html(top3Domains[0]);
+            $("#square2 a div").html(top3Domains[1]);
+            $("#square3 a div").html(top3Domains[2]);
+
+
+=======
+>>>>>>> FETCH_HEAD
         });
 
 }
@@ -140,6 +196,29 @@ function findDomainsOfCategoryExcept(categories){
             $("#square1 a").attr("href", "./ListResult.html?domain="+top3Domains[0]);
             $("#square2 a").attr("href", "./ListResult.html?domain="+top3Domains[1]);
             $("#square3 a").attr("href", "./ListResult.html?domain="+top3Domains[2]);
+
+            //set images
+            if($.inArray(top3Domains[0], websiteImages) != -1) {
+                $("#square1 a img").attr("src","./image/domain/"+top3Domains[0]+".png");
+            }else{
+                $("#square1 a img").attr("src","./image/domain/website.png");
+            }
+
+            if($.inArray(top3Domains[1], websiteImages) != -1) {
+                $("#square2 a img").attr("src","./image/domain/"+top3Domains[1]+".png");
+            }else{
+                $("#square2 a img").attr("src","./image/domain/website.png");
+            }
+
+            if($.inArray(top3Domains[2], websiteImages) != -1) {
+                $("#square3 a img").attr("src","./image/domain/"+top3Domains[2]+".png");
+            }else{
+                $("#square3 a img").attr("src","./image/domain/website.png");
+            }
+
+            $("#square1 a div").html(top3Domains[0]);
+            $("#square2 a div").html(top3Domains[1]);
+            $("#square3 a div").html(top3Domains[2]);
         });
 
 }
@@ -194,6 +273,29 @@ function findDomainsOfTimePeriod(timePeriod){
             $("#square1 a").attr("href", "./ListResult.html?domain="+top3Domains[0]+"&timePeriod="+timePeriod);
             $("#square2 a").attr("href", "./ListResult.html?domain="+top3Domains[1]+"&timePeriod="+timePeriod);
             $("#square3 a").attr("href", "./ListResult.html?domain="+top3Domains[2]+"&timePeriod="+timePeriod);
+
+            //set images
+            if($.inArray(top3Domains[0], websiteImages) != -1) {
+                $("#square1 a img").attr("src","./image/domain/"+top3Domains[0]+".png");
+            }else{
+                $("#square1 a img").attr("src","./image/domain/website.png");
+            }
+
+            if($.inArray(top3Domains[1], websiteImages) != -1) {
+                $("#square2 a img").attr("src","./image/domain/"+top3Domains[1]+".png");
+            }else{
+                $("#square2 a img").attr("src","./image/domain/website.png");
+            }
+
+            if($.inArray(top3Domains[2], websiteImages) != -1) {
+                $("#square3 a img").attr("src","./image/domain/"+top3Domains[2]+".png");
+            }else{
+                $("#square3 a img").attr("src","./image/domain/website.png");
+            }
+
+            $("#square1 a div").html(top3Domains[0]);
+            $("#square2 a div").html(top3Domains[1]);
+            $("#square3 a div").html(top3Domains[2]);
         });
 
 }
@@ -203,8 +305,8 @@ function findDomainsOfFrequency(frequency){
     var domains = new Array();
     var frequencyOfDomain = new Array();
 
-    var microsecondsPerWeek = 1000 * 60 * 60 * 24 * 14;
-    var twoWeeksAgo = (new Date).getTime() - microsecondsPerWeek;
+    var microsecondsTwoWeeks = 1000 * 60 * 60 * 24 * 14;
+    var twoWeeksAgo = (new Date).getTime() - microsecondsTwoWeeks;
     chrome.history.search({
             'text': '',             // Return every history item....
             'startTime': twoWeeksAgo  // that was accessed less than one week ago.
@@ -248,13 +350,13 @@ function findDomainsOfFrequency(frequency){
                 }
             }else if (frequency == "sometimes") {
                 for (var key in frequencyOfDomain) {
-                    if (frequencyOfDomain[key] <= 20 && frequencyOfDomain[key] > 5) {
+                    if (frequencyOfDomain[key] <= 20 && frequencyOfDomain[key] > 3) {
                         resultDomains[key] = domains[key];
                     }
                 }
             }else if (frequency == "occasionally") {
                 for (var key in frequencyOfDomain) {
-                    if (frequencyOfDomain[key] <= 5) {
+                    if (frequencyOfDomain[key] <= 3) {
                         resultDomains[key] = domains[key];
                     }
                 }
@@ -263,13 +365,89 @@ function findDomainsOfFrequency(frequency){
             var top3Domains = findTop3Domains(resultDomains);
 
             //set contents
-            $("#square1 a").attr("href", "./ListResult.html?domain="+top3Domains[0]);
-            $("#square2 a").attr("href", "./ListResult.html?domain="+top3Domains[1]);
-            $("#square3 a").attr("href", "./ListResult.html?domain="+top3Domains[2]);
+            $("#square1 a").attr("href", "./ListResult.html?domain="+top3Domains[0]+"&frequency="+frequency);
+            $("#square2 a").attr("href", "./ListResult.html?domain="+top3Domains[1]+"&frequency="+frequency);
+            $("#square3 a").attr("href", "./ListResult.html?domain="+top3Domains[2]+"&frequency="+frequency);
+<<<<<<< HEAD
+
+            //set images
+            if($.inArray(top3Domains[0], websiteImages) != -1) {
+                $("#square1 a img").attr("src","./image/domain/"+top3Domains[0]+".png");
+            }else{
+                $("#square1 a img").attr("src","./image/domain/website.png");
+            }
+
+            if($.inArray(top3Domains[1], websiteImages) != -1) {
+                $("#square2 a img").attr("src","./image/domain/"+top3Domains[1]+".png");
+            }else{
+                $("#square2 a img").attr("src","./image/domain/website.png");
+            }
+
+            if($.inArray(top3Domains[2], websiteImages) != -1) {
+                $("#square3 a img").attr("src","./image/domain/"+top3Domains[2]+".png");
+            }else{
+                $("#square3 a img").attr("src","./image/domain/website.png");
+            }
+
+            $("#square1 a div").html(top3Domains[0]);
+            $("#square2 a div").html(top3Domains[1]);
+            $("#square3 a div").html(top3Domains[2]);
+=======
+>>>>>>> FETCH_HEAD
         });
 
 }
 
+function setMenuItems(){
+
+    var microsecondsPerWeek = 1000 * 60 * 60 * 24 * 14;
+    var twoWeeksAgo = (new Date).getTime() - microsecondsPerWeek;
+    var cateGoryFrequency = new Array();
+
+
+    chrome.history.search({
+            'text': '',             // Return every history item....
+            'startTime': twoWeeksAgo  // that was accessed less than one week ago.
+        },
+        function (historyItems) {
+
+            for(var i = 0; i < historyItems.length; i++){
+                // document.write("<a href='" + historyItems[i].url + "'>" + historyItems[i].title +"</a> -- " + historyItems[i].url + "</br>");
+                var domain = historyItems[i].url.match(/http[s]?:\/\/(.*?)([:\/]|$)/);
+                if (domain != null) {
+                    //document.write(historyItems[i].url+"-------"+tldjs.getDomain(historyItems[i].url)+"</br>");
+                    var hostName = tldjs.getDomain(historyItems[i].url);
+                    //search for category info in local storage
+                    if (hostName != null){
+                        if (localStorage[hostName] != null) {
+                            if (cateGoryFrequency[localStorage[hostName]] == null){
+                                cateGoryFrequency[localStorage[hostName]] = 1;
+                            }else{
+                                cateGoryFrequency[localStorage[hostName]] += 1;
+                            }
+                        }
+
+                    }
+
+                }
+
+            }
+
+            //sort the result
+            var top3Categoryies = findTop3Category(cateGoryFrequency);
+
+            //set contents
+            $("#categoryMenu p#item1 input").attr("name",top3Categoryies[0]);
+            $("#categoryMenu p#item2 input").attr("name",top3Categoryies[1]);
+            $("#categoryMenu p#item3 input").attr("name",top3Categoryies[2]);
+
+            $("#categoryMenu p#item1 a").html(top3Categoryies[0]);
+            $("#categoryMenu p#item2 a").html(top3Categoryies[1]);
+            $("#categoryMenu p#item3 a").html(top3Categoryies[2]);
+        });
+
+
+}
 
 function findTop3Domains(domains){
     var result = new Array();
@@ -305,3 +483,169 @@ function findTop3Domains(domains){
     return result;
 
 }
+
+function findTop3Category(frequencies){
+    var result = new Array();
+
+    //find max
+    var max = 0
+    for(var key in frequencies){
+        if (frequencies[key] > max){
+            max = frequencies[key];
+            result[0] = key;
+        }
+    }
+
+    //find second
+    var second = 0
+    for(var key in frequencies){
+        if (frequencies[key] > second && key != result[0]){
+            second = frequencies[key];
+            result[1] = key;
+        }
+    }
+
+    //find third
+    var third = 0
+    for(var key in frequencies){
+        if (frequencies[key] > third && key != result[0] && key != result[1]){
+            third = frequencies[key];
+            result[2] = key;
+        }
+    }
+
+    return result;
+}
+
+function onClickSearchButton(){
+
+    var keyword = $("#input_keyword").attr("value");
+    var categoryStr ="";
+    var otherCategory = false;
+    var exceptCategoryStr = "";
+    var timePeriod = $("input[name='timePeriod']:checked").val();
+    var frequency = $("input[name='frequency']:checked").val();
+
+    if ($("#categoryMenu p#item4 input").attr("checked") == undefined) {
+
+        if ($("#categoryMenu p#item1 input").attr("checked") != undefined) {
+            if (categoryStr.length == 0) {
+                categoryStr = $("#categoryMenu p#item1 input").attr("name");
+            } else {
+                categoryStr += ("|" + $("#categoryMenu p#item1 input").attr("name"));
+            }
+        }
+
+
+        if ($("#categoryMenu p#item2 input").attr("checked") != undefined) {
+            if (categoryStr.length == 0) {
+                categoryStr = $("#categoryMenu p#item2 input").attr("name");
+            } else {
+                categoryStr += ("|" + $("#categoryMenu p#item2 input").attr("name"));
+            }
+        }
+
+        if ($("#categoryMenu p#item3 input").attr("checked") != undefined) {
+            if (categoryStr.length == 0) {
+                categoryStr = $("#categoryMenu p#item3 input").attr("name");
+            } else {
+                categoryStr += ("|" + $("#categoryMenu p#item3 input").attr("name"));
+            }
+        }
+
+    }else {
+        otherCategory = true;
+
+        if ($("#categoryMenu p#item1 input").attr("checked") == undefined) {
+            if (exceptCategoryStr.length == 0) {
+                exceptCategoryStr = $("#categoryMenu p#item1 input").attr("name");
+            } else {
+                exceptCategoryStr += ("|" + $("#categoryMenu p#item1 input").attr("name"));
+            }
+        }
+
+
+        if ($("#categoryMenu p#item2 input").attr("checked") == undefined) {
+            if (exceptCategoryStr.length == 0) {
+                exceptCategoryStr = $("#categoryMenu p#item2 input").attr("name");
+            } else {
+                exceptCategoryStr += ("|" + $("#categoryMenu p#item2 input").attr("name"));
+            }
+        }
+
+        if ($("#categoryMenu p#item3 input").attr("checked") == undefined) {
+            if (exceptCategoryStr.length == 0) {
+                exceptCategoryStr = $("#categoryMenu p#item3 input").attr("name");
+            } else {
+                exceptCategoryStr += ("|" + $("#categoryMenu p#item3 input").attr("name"));
+            }
+        }
+
+
+    }
+
+    //generate url
+    var parameters = "";
+
+    if(otherCategory == false) {
+
+        if (keyword != null && keyword != "") {
+            keyword = "keyword=" + keyword;
+            parameters = (parameters == "") ? keyword : parameters + "&" + keyword;
+        }
+
+        if (timePeriod != null && timePeriod != "") {
+            timePeriod = "timePeriod=" + timePeriod;
+            parameters = (parameters == "") ? timePeriod : parameters + "&" + timePeriod;
+        }
+
+        if (frequency != null && frequency != "") {
+            frequency = "frequency=" + frequency;
+            parameters = (parameters == "") ? frequency : parameters + "&" + frequency;
+        }
+
+        if (categoryStr != null && categoryStr != "") {
+            categoryStr = "categoryStr=" + categoryStr;
+            parameters = (parameters == "") ? categoryStr : parameters + "&" + categoryStr;
+        }
+    }else {
+
+        if (keyword != null && keyword != "") {
+            keyword = "keyword=" + keyword;
+            parameters = (parameters == "") ? keyword : parameters + "&" + keyword;
+        }
+
+        if (timePeriod != null && timePeriod != "") {
+            timePeriod = "timePeriod=" + timePeriod;
+            parameters = (parameters == "") ? timePeriod : parameters + "&" + timePeriod;
+        }
+
+        if (frequency != null && frequency != "") {
+            frequency = "frequency=" + frequency;
+            parameters = (parameters == "") ? frequency : parameters + "&" + frequency;
+        }
+
+        parameters = (parameters == "") ? "otherCategory=true" : parameters + "&otherCategory=true";
+
+        if (exceptCategoryStr != null && exceptCategoryStr != "") {
+            exceptCategoryStr = "exceptCategoryStr=" + exceptCategoryStr;
+            parameters = (parameters == "") ? exceptCategoryStr : parameters + "&" + exceptCategoryStr;
+        }
+    }
+
+    var url = "./ListResult.html?" + parameters;
+    url = encodeURI(url);
+
+    window.location.href = url;
+
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+    var submitBtn = document.querySelector("#submitButton");
+    submitBtn.addEventListener('click', onClickSearchButton);
+
+
+
+
+
+})

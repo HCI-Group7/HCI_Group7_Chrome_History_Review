@@ -144,17 +144,31 @@ body { width: 90%; margin: 10px auto 0 auto; font-family: Arial, helvetica; font
 .content {
     background: #FFFFFF;
     border-top: 2px;
-    padding: 2em;
+
     height: 100%;
 
-    margin: center
+	float: none;
+}
 
+div.domain:link {
+	text-decoration: none;
+}
+div.domain:visited {
+	text-decoration: none;
+}
+div.domain:hover {
+	text-decoration: none;
+}
+div.domain:active {
+	text-decoration: none;
 }
 
 
 
+#pathLink{
+	position: absolute;
 
-
+}
 
 
 

@@ -6,6 +6,8 @@ var categories = new Array();
 var cateGoryFrequency = new Array();
 var top3Categoryies = new Array();
 
+var categoryImages = ["News_and_Media", "Search_Engines_and_Portals", "Shopping_and_Auction", "Social_Networking"];
+
 //chrome.storage.local.set({'bilibili.com': "Streaming Media and Download"}, function() {
 //  // Notify that we saved.
 //  alert('Settings saved');
@@ -83,6 +85,30 @@ chrome.history.search({
         $("div#tab1 li#square3 a span").html(top3Categoryies[2])
 
         $("div#tab1 li#square4 a").attr("href","./SocialNetwork.html?topTab=category&contentTab=other&except="+top3Categoryies[0]+"|"+top3Categoryies[1]+"|"+top3Categoryies[2]);
+
+        //set images
+
+        var imageName0 = top3Categoryies[0].replace(/\s/g, "_");
+        if($.inArray(imageName0, categoryImages) != -1){
+            $("div#tab1 li#square1 a img").attr("src","./image/category/"+imageName0+".png");
+        }else{
+            $("div#tab1 li#square1 a img").attr("src","./image/category/unclassified.png");
+        }
+
+        var imageName1 = top3Categoryies[1].replace(/\s/g, "_");
+        if($.inArray(imageName1, categoryImages) != -1){
+            $("div#tab1 li#square2 a img").attr("src","./image/category/"+imageName1+".png");
+        }else{
+            $("div#tab1 li#square2 a img").attr("src","./image/category/unclassified.png");
+        }
+
+        var imageName2 = top3Categoryies[2].replace(/\s/g, "_");
+        if($.inArray(imageName2, categoryImages) != -1){
+            $("div#tab1 li#square3 a img").attr("src","./image/category/"+imageName2+".png");
+        }else{
+            $("div#tab1 li#square3 a img").attr("src","./image/category/unclassified.png");
+        }
+
      });
 
 
