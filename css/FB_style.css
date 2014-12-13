@@ -2,6 +2,11 @@ body { width: 90%; margin: 10px auto 0 auto; font-family: Arial, helvetica; font
 
 /* ------------------------------------------------- */
 
+#pathList{
+	position: relative;
+	margin-top: 10%;
+}
+
 #tabs {
     overflow: hidden;
     width: 100%;
@@ -98,7 +103,6 @@ body { width: 90%; margin: 10px auto 0 auto; font-family: Arial, helvetica; font
 
 .image-block{
 	list-style: none;
-<<<<<<< HEAD
 	width: 100%;;
 	/*width: 984px;*/
 	/*height: 300px;*/
@@ -108,16 +112,6 @@ body { width: 90%; margin: 10px auto 0 auto; font-family: Arial, helvetica; font
 	/*margin-left: auto;*/
 	/*margin-right: auto;*/
 	margin-top: -10%;
-=======
-	/*width: 984px;*/
-	/*height: 300px;*/
-	position: relative;
-	top: 20;
-	left: 50px;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 200px;
->>>>>>> FETCH_HEAD
 	margin-bottom: auto;
 	padding: 0;
 	background: #FFFFFF;
@@ -158,7 +152,14 @@ body { width: 90%; margin: 10px auto 0 auto; font-family: Arial, helvetica; font
     padding: 2em;
     height: 100%;
 
-    margin: center
+    margin: auto;
+
+}
+
+.container{
+
+	position: relative;
+	margin: 10% 10% 10% 10%;
 
 }
 

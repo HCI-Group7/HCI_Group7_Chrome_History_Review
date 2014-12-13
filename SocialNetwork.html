@@ -3,11 +3,7 @@
 	<head>
 		<title>Social NewWork Result</title>
 		<link rel="stylesheet" rev="stylesheet" href="css/FB_style.css" type="text/css" media="all"/>
-<<<<<<< HEAD
 		<script src="js/jquery-1.7.2.min.js"></script>
-=======
-
->>>>>>> FETCH_HEAD
 		<!--Menu Button-->
 		<link rel="stylesheet" type="text/css" href="css/menu_button.css" />
 		<script src="js/snap.svg-min.js"></script>
@@ -16,27 +12,17 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link href="./css/bootstrap.min.css" rel="stylesheet">
 		<link href="./css/bootstrap-responsive.min.css" rel="stylesheet">
-<<<<<<< HEAD
 		<link type="text/css" src="./js/bootstrap-responsive.css"/>
 
 		<script src="./js/tldjs.js"></script>
-=======
-		<script type="text/javascript" src="./js/bootstrap-responsive.css"></script>
->>>>>>> FETCH_HEAD
 
 	</head>
 	<body>
 		
 		<ul id="tabs">
-<<<<<<< HEAD
-			<li><a href="chrome-extension://eminbpbfphfkcoieibljkbkdphjmciep/index.html" name="#tab1" name="#tab1">Category</a></li>
-			<li><a href="index.html#tab2" name="#tab2">Time Period</a></li>
-			<li><a href="index.html#tab3" name="#tab3">Frequency</a></li>
-=======
-			<li><a href="#" name="#tab1">Category</a></li>
-			<li><a href="#" name="#tab2">Time Period</a></li>
-			<li><a href="#" name="#tab3">Frequency</a></li>
->>>>>>> FETCH_HEAD
+			<li><a href="chrome-extension://eminbpbfphfkcoieibljkbkdphjmciep/index.html" name="#tab1" >Category</a></li>
+			<li><a href="index.html#tab2" name="#tab2" >Time Period</a></li>
+			<li><a href="index.html#tab3" name="#tab3" >Frequency</a></li>
   		</ul>
 		
 		<content>
@@ -74,7 +60,7 @@
 			</div>
 			<button class="testbutton" id="open-button">Open Menu</button>
 
-<<<<<<< HEAD
+
 			<!-- The path link will dynimicly add by using js-->
 
 			<ul id="pathLink" >
@@ -84,50 +70,29 @@
 			</ul>
 
 			<!--Content-->
-			<section id="content" class="content-wrap container">
+			<section id="content" class="container">
 				
 				<ul id="image-block" class="image-block row">
 					<li class="span3" id="square1">
 						<a>
 							<img id="contentFirstImage" src="./image/facebook.jpg">
-=======
-			<!--Content-->
-			<section id="content">
-				
-				<ul id="image-block" class="image-block">
-					<li class="span3">
-						<a>
-							<img id="contentFirstImage" src="./image/facebook.jpg" onclick="location.href'Shopping_Result.html'">
->>>>>>> FETCH_HEAD
 							<!--<div style="display: block; left: 100%; top: 0px; overflow: hidden; transition: all 300ms ease; -webkit-transition: all 300ms ease;"><span>Today</span></div>-->
 						</a>
 					</li>
 
-<<<<<<< HEAD
 					<li class="span3" id="square2">
-=======
-					<li class="span3">
->>>>>>> FETCH_HEAD
 						<a href="">
 							<img id="contentSecondImage" src="./image/twitter.jpg">
 						</a>
 					</li>
 
-<<<<<<< HEAD
 					<li class="span3" id="square3">
-=======
-					<li class="span3">
->>>>>>> FETCH_HEAD
 						<a href="">
 							<img id="contentThirdImage" src="./image/tumblr.png" >
 						</a>
 					</li>
 
-<<<<<<< HEAD
 					<li class="span3" id="square4">
-=======
-					<li class="span3">
->>>>>>> FETCH_HEAD
 						<a href="">
 							<img id="contentOthersImage" src="./image/others.gif" >
 						</a>
@@ -141,7 +106,6 @@
 
 	<script src="js/classie.js"></script>
 	<script src="js/main4.js"></script>
-<<<<<<< HEAD
 	<script src="js/second.js"></script>
 	<!--<script type="text/javascript">-->
 
@@ -178,44 +142,6 @@
 		<!--Request();-->
 
 	<!--</script>-->
-=======
-
-	<script type="text/javascript">
-
-		function Request() {
-			var url = document.location.href;
-			var arrStr = url.substring(url.indexOf("?") + 1).split("&");
-			// return arrStr;
-			var topTab = arrStr[0];
-			//topTab = topTab.split("=");
-			var contentTab = arrStr[1];
-			console.log(topTab);
-			console.log(contentTab);
-
-			// if the current page is socialnetwork result
-			if(topTab == "topTab=category" && contentTab == "contentTab=socialNetwork"){
-				console.log("change the content of this page to fit socialNetwork");
-				document.getElementById("contentFirstImage").src="./image/facebook.jpg";
-				document.getElementById("contentSecondImage").src="./image/twitter.jpg";
-				document.getElementById("contentThirdImage").src="./image/tumblr.png";
-				document.getElementById("contentOthersImage").src="./image/others.gif";
-			}else if(topTab=="topTab=category" && contentTab == "contentTab=shopping"){
-				console.log("change the content of this page to fit shopping");
-				document.getElementById("contentFirstImage").src="./image/amazon.jpg";
-				document.getElementById("contentSecondImage").src="./image/ebay.png";
-				document.getElementById("contentThirdImage").src="./image/best_buy.jpg";
-				document.getElementById("contentOthersImage").src="./image/others.gif";
-			}
-
-
-
-
-		}
-
-		Request();
-
-	</script>
->>>>>>> FETCH_HEAD
 
 	</body>
 </html>

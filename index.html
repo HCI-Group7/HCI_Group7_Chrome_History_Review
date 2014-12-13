@@ -34,24 +34,14 @@
       <div id="tab1" style="text-align: center">
           <section>
               <ul id="da-thumbs" class="da-thumbs row">
-<<<<<<< HEAD
                   <li class="span3" id="square1">
                       <a href="./SocialNetwork.html?topTab=category&contentTab=socialNetwork">
-=======
-                  <li class="span3">
-                      <a onclick="window.location.href = 'SocialNetwork.html?topTab=category&contentTab=socialNetwork'";>
->>>>>>> FETCH_HEAD
                           <img src="./image/social.jpg">
                           <div style="display: block; left: 100%; top: 0px; overflow: hidden; transition: all 30ms ease; -webkit-transition: all 300ms ease;" ><span>Social Network</span></div>
                       </a>
                   </li>
-<<<<<<< HEAD
                   <li class="span3" id="square2">
                       <a>
-=======
-                  <li class="span3">
-                      <a onclick="window.location.href='SocialNetwork.html?topTab=category&contentTab=shopping'";>
->>>>>>> FETCH_HEAD
                           <img src="./image/shopping.png">
                           <div style="display: block; left: -100%; top: 0px; overflow: hidden; transition: all 300ms ease; -webkit-transition: all 300ms ease;"><span>Shopping</span></div>
                       </a>
@@ -131,7 +121,6 @@
   
   <p id="about">&nbsp;</p>
 
-<<<<<<< HEAD
   <!--<script>-->
     <!--function resetTabs(){-->
         <!--$("#content > div").hide(); //Hide all content-->
@@ -168,48 +157,6 @@
         <!--}-->
     <!--})()-->
   <!--</script>-->
-=======
-  <script>
-    function resetTabs(){
-        $("#content > div").hide(); //Hide all content
-        $("#tabs a").attr("id",""); //Reset id's      
-    }
-
-    var myUrl = window.location.href; //get URL
-    var myUrlTab = myUrl.substring(myUrl.indexOf("#")); // For localhost/tabs.html#tab2, myUrlTab = #tab2     
-    var myUrlTabName = myUrlTab.substring(0,4); // For the above example, myUrlTabName = #tab
-
-    (function(){
-        $("#content > div").hide(); // Initially hide all content
-        $("#tabs li:first a").attr("id","current"); // Activate first tab
-        $("#content > div:first").fadeIn(); // Show first tab content
-        
-        $("#tabs a").on("click",function(e) {
-            e.preventDefault();
-            if ($(this).attr("id") == "current"){ //detection for current tab
-             return       
-            }
-            else{             
-            resetTabs();
-            $(this).attr("id","current"); // Activate this
-            $($(this).attr('name')).fadeIn(); // Show content for current tab
-            }
-        });
-
-        for (i = 1; i <= $("#tabs li").length; i++) {
-            console.log("test");
-            console.log(myUrlTab);
-            console.log(myUrlTabName);
-          if (myUrlTab == myUrlTabName + i) {
-              console.log(myUrlTab);
-              resetTabs();
-              $("a[name='"+myUrlTab+"']").attr("id","current"); // Activate url tab
-              $(myUrlTab).fadeIn(); // Show url tab content        
-          }
-        }
-    })()
-  </script>
->>>>>>> FETCH_HEAD
 
   <script type="text/javascript" src="./js/jquery.hoverdir.js"></script>
   <script type="text/javascript" src="/js/index.js"></script>
