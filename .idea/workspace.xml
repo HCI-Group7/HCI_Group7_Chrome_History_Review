@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="318eb19f-955f-44ce-a8b0-25b296d59df1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SocialNetwork.html" afterPath="$PROJECT_DIR$/SocialNetwork.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/result.js" afterPath="$PROJECT_DIR$/js/result.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/second.js" afterPath="$PROJECT_DIR$/js/second.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -32,28 +30,28 @@
       <file leaf-file-name="SocialNetwork.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SocialNetwork.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.0" vertical-offset="375" max-vertical-offset="2265">
+            <state vertical-scroll-proportion="4.8" vertical-offset="765" max-vertical-offset="2265">
               <caret line="35" column="129" selection-start-line="35" selection-start-column="129" selection-end-line="35" selection-end-column="129" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="second.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="second.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/second.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="6859" max-vertical-offset="7935">
-              <caret line="498" column="9" selection-start-line="498" selection-start-column="9" selection-end-line="498" selection-end-column="9" />
+            <state vertical-scroll-proportion="0.3410042" vertical-offset="859" max-vertical-offset="7950">
+              <caret line="79" column="42" selection-start-line="79" selection-start-column="42" selection-end-line="79" selection-end-column="42" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="result.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="result.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/result.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.89016736" vertical-offset="3334" max-vertical-offset="4695">
-              <caret line="281" column="60" selection-start-line="281" selection-start-column="60" selection-end-line="281" selection-end-column="60" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="2239" max-vertical-offset="4695">
+              <caret line="265" column="39" selection-start-line="265" selection-start-column="39" selection-end-line="265" selection-end-column="39" />
               <folding>
                 <element signature="e#0#40#0" expanded="false" />
               </folding>
@@ -90,8 +88,8 @@
         <option value="$PROJECT_DIR$/ListResult.html" />
         <option value="$PROJECT_DIR$/manifest.json" />
         <option value="$PROJECT_DIR$/SocialNetwork.html" />
-        <option value="$PROJECT_DIR$/js/second.js" />
         <option value="$PROJECT_DIR$/js/result.js" />
+        <option value="$PROJECT_DIR$/js/second.js" />
       </list>
     </option>
   </component>
@@ -283,13 +281,20 @@
       <option name="project" value="LOCAL" />
       <updated>1418367272677</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="finish menu part&#10;&#10;todo: test &amp; fix bugs; modify UI">
+      <created>1418441246131</created>
+      <option name="number" value="00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1418441246132</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1053" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292683" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -305,7 +310,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292683" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -331,7 +335,8 @@
     <MESSAGE value="finish generating content for category tab dynamically" />
     <MESSAGE value="finish js part of 1st &amp; 2nd parts initially.&#10;&#10;not finish: menu part dynamically" />
     <MESSAGE value="finish result part initially&#10;&#10;not finish: menu part dynamically" />
-    <option name="LAST_COMMIT_MESSAGE" value="finish result part initially&#10;&#10;not finish: menu part dynamically" />
+    <MESSAGE value="finish menu part&#10;&#10;todo: test &amp; fix bugs; modify UI" />
+    <option name="LAST_COMMIT_MESSAGE" value="finish menu part&#10;&#10;todo: test &amp; fix bugs; modify UI" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -696,14 +701,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SocialNetwork.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.0" vertical-offset="375" max-vertical-offset="2265">
-          <caret line="35" column="129" selection-start-line="35" selection-start-column="129" selection-end-line="35" selection-end-column="129" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/category.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.9215481" vertical-offset="1264" max-vertical-offset="2535">
@@ -712,21 +709,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/second.js">
+    <entry file="file://$PROJECT_DIR$/js/result.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="6859" max-vertical-offset="7935">
-          <caret line="498" column="9" selection-start-line="498" selection-start-column="9" selection-end-line="498" selection-end-column="9" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="2239" max-vertical-offset="4695">
+          <caret line="265" column="39" selection-start-line="265" selection-start-column="39" selection-end-line="265" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#40#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SocialNetwork.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="4.8" vertical-offset="765" max-vertical-offset="2265">
+          <caret line="35" column="129" selection-start-line="35" selection-start-column="129" selection-end-line="35" selection-end-column="129" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/result.js">
+    <entry file="file://$PROJECT_DIR$/js/second.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.89016736" vertical-offset="3334" max-vertical-offset="4695">
-          <caret line="281" column="60" selection-start-line="281" selection-start-column="60" selection-end-line="281" selection-end-column="60" />
-          <folding>
-            <element signature="e#0#40#0" expanded="false" />
-          </folding>
+        <state vertical-scroll-proportion="0.3410042" vertical-offset="859" max-vertical-offset="7950">
+          <caret line="79" column="42" selection-start-line="79" selection-start-column="42" selection-end-line="79" selection-end-column="42" />
+          <folding />
         </state>
       </provider>
     </entry>

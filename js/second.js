@@ -98,6 +98,7 @@ function findDomainsOfCategory(category){
             $("#square1 a").attr("href", "./ListResult.html?domain="+top3Domains[0]);
             $("#square2 a").attr("href", "./ListResult.html?domain="+top3Domains[1]);
             $("#square3 a").attr("href", "./ListResult.html?domain="+top3Domains[2]);
+            $("#square4 a").attr("href", "./ListResult.html?categoryStr="+category);
         });
 
 }
