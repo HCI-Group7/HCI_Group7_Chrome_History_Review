@@ -31,19 +31,39 @@ $(document).ready(function(){
     var domain;
     var timePeroid;
     var frequency;
+    var categories = new Array();
+    var otherCategory = false;
+    var exceptCategories = new Array();
+    var keyword = "";
 
     for (var index in arrStr) {
         var arr = arrStr[index];
         if (arr.split("=")[0] == "domain") {
-            domain = arr.split("=")[1]
+            domain = arr.split("=")[1];
         }
 
         if (arr.split("=")[0] == "timePeriod") {
-            timePeroid = arr.split("=")[1]
+            timePeroid = arr.split("=")[1];
         }
 
         if (arr.split("=")[0] == "frequency") {
-            frequency = arr.split("=")[1]
+            frequency = arr.split("=")[1];
+        }
+
+        if (arr.split("=")[0] == "keyword") {
+            keyword = arr.split("=")[1];
+        }
+
+        if (arr.split("=")[0] == "categoryStr") {
+           categories = (arr.split("=")[1]).split("|");
+        }
+
+        if (arr.split("=")[0] == "otherCategory") {
+            otherCategory = true;
+        }
+
+        if (arr.split("=")[0] == "exceptCategoryStr" && otherCategory == true) {
+            exceptCategories = (arr.split("=")[1]).split("|");
         }
 
     }
@@ -85,7 +105,7 @@ $(document).ready(function(){
     //add content for today part
     var today = (new Date).getTime() - microSecondPerDay;
     chrome.history.search({
-            'text': '',             // Return every history item....
+            'text': keyword,             // Return every history item....
             'startTime': today  // that was accessed less than one week ago.
         },
         function (historyItems) {
@@ -95,7 +115,7 @@ $(document).ready(function(){
                 // document.write("<a href='" + historyItems[i].url + "'>" + historyItems[i].title +"</a> -- " + historyItems[i].url + "</br>");
                 var tmp = historyItems[i].url.match(/http[s]?:\/\/(.*?)([:\/]|$)/);
                 if (tmp != null) {
-                    if (historyEligible(historyItems[i], domain, frequency, frequencyOfDomain)) {
+                    if (historyEligible(historyItems[i], domain, frequency, frequencyOfDomain,  categories, otherCategory, exceptCategories)) {
                         results.push(historyItems[i]);
                     }
 
@@ -117,7 +137,7 @@ $(document).ready(function(){
         var twoDays = (new Date).getTime() - microSecondPerDay*2;
 
         chrome.history.search({
-                'text': '',             // Return every history item....
+                'text': keyword,             // Return every history item....
                 'startTime': twoDays,  // that was accessed less than one week ago.
                 'endTime': today
             },
@@ -128,7 +148,7 @@ $(document).ready(function(){
                     // document.write("<a href='" + historyItems[i].url + "'>" + historyItems[i].title +"</a> -- " + historyItems[i].url + "</br>");
                     var tmp = historyItems[i].url.match(/http[s]?:\/\/(.*?)([:\/]|$)/);
                     if (tmp != null) {
-                        if (historyEligible(historyItems[i], domain, frequency, frequencyOfDomain)) {
+                        if (historyEligible(historyItems[i], domain, frequency, frequencyOfDomain, categories, otherCategory, exceptCategories)) {
                             results.push(historyItems[i]);
                         }
 
@@ -151,7 +171,7 @@ $(document).ready(function(){
         var oneWeek = (new Date).getTime() - microSecondPerDay*7;
 
         chrome.history.search({
-                'text': '',             // Return every history item....
+                'text': keyword,             // Return every history item....
                 'startTime': oneWeek,  // that was accessed less than one week ago.
                 'endTime': twoDays
             },
@@ -162,7 +182,7 @@ $(document).ready(function(){
                     // document.write("<a href='" + historyItems[i].url + "'>" + historyItems[i].title +"</a> -- " + historyItems[i].url + "</br>");
                     var tmp = historyItems[i].url.match(/http[s]?:\/\/(.*?)([:\/]|$)/);
                     if (tmp != null) {
-                        if (historyEligible(historyItems[i], domain, frequency, frequencyOfDomain)) {
+                        if (historyEligible(historyItems[i], domain, frequency, frequencyOfDomain, categories, otherCategory, exceptCategories)) {
                             results.push(historyItems[i]);
                         }
 
@@ -197,7 +217,7 @@ $(document).ready(function(){
                     // document.write("<a href='" + historyItems[i].url + "'>" + historyItems[i].title +"</a> -- " + historyItems[i].url + "</br>");
                     var tmp = historyItems[i].url.match(/http[s]?:\/\/(.*?)([:\/]|$)/);
                     if (tmp != null) {
-                        if (historyEligible(historyItems[i], domain, frequency, frequencyOfDomain)) {
+                        if (historyEligible(historyItems[i], domain, frequency, frequencyOfDomain, categories, otherCategory, exceptCategories)) {
                             results.push(historyItems[i]);
                         }
 
@@ -216,7 +236,7 @@ $(document).ready(function(){
 
 })();
 
-function historyEligible(historyItem, domain, frequency, frequencyOfDomain) {
+function historyEligible(historyItem, domain, frequency, frequencyOfDomain, categoryies, otherCategory, exceptionCategoryies) {
 
     var result = true;
     var historyDomain = tldjs.getDomain(historyItem.url);
@@ -231,7 +251,7 @@ function historyEligible(historyItem, domain, frequency, frequencyOfDomain) {
         }
     }
 
-    if (frequency != null) {
+    if (frequency != null && frequency != "") {
         var historyFrequency = frequencyOfDomain[historyDomain];
 
         if(frequency == "often") {
@@ -247,6 +267,23 @@ function historyEligible(historyItem, domain, frequency, frequencyOfDomain) {
                 result = false;
             }
         }
+    }
+
+    if (otherCategory == false){
+        if (categoryies.length != 0){
+            var itemCategory = localStorage[historyDomain];
+            if ($.inArray(itemCategory, categoryies) == -1){
+                result = false;
+            }
+        }
+    }else{
+        if (exceptionCategoryies.length != 0){
+            var itemCategory = localStorage[historyDomain];
+            if ($.inArray(itemCategory, exceptionCategoryies) != -1){
+                result = false;
+            }
+        }
+
     }
 
     return result;
