@@ -1,0 +1,146 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Social NewWork Result</title>
+		<link rel="stylesheet" rev="stylesheet" href="css/FB_style.css" type="text/css" media="all"/>
+		<script src="js/jquery-1.7.2.min.js"></script>
+		<!--Menu Button-->
+		<link rel="stylesheet" type="text/css" href="css/menu_button.css" />
+		<script src="js/snap.svg-min.js"></script>
+
+		<!--bootstrap-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="./css/bootstrap.min.css" rel="stylesheet">
+		<link href="./css/bootstrap-responsive.min.css" rel="stylesheet">
+		<link type="text/css" src="./js/bootstrap-responsive.css"/>
+
+		<script src="./js/tldjs.js"></script>
+
+	</head>
+	<body>
+		
+		<ul id="tabs">
+			<li><a href="chrome-extension://eminbpbfphfkcoieibljkbkdphjmciep/index.html" name="#tab1" name="#tab1">Category</a></li>
+			<li><a href="index.html#tab2" name="#tab2">Time Period</a></li>
+			<li><a href="index.html#tab3" name="#tab3">Frequency</a></li>
+  		</ul>
+		
+		<content>
+
+			<!--Side Bar Menu-->
+			<div class="menu-wrap">
+				<nav class="menu">
+					<div class="menu-content">
+						<form>
+							<p><input class="form-wrapper cf" type="text" name="keyword" placeholder="Key Word"></p>
+							<p class="text1-properties">Category:</p>
+								<p class="text2-properties"><input type="checkbox" name="Social Network" />Social Network</P>
+								<p class="text2-properties"><input type="checkbox" name="Shopping" />Shopping</P>
+								<p class="text2-properties"><input type="checkbox" name="Education">Education</p>
+								<p class="text2-properties"><input type="checkbox" name="Blog">Blog</p>
+							<p class="text1-properties">Time Period:</p>
+								<p class="text2-properties"><input type="checkbox" name="OneDayAgo">One Day Ago</p>
+								<p class="text2-properties"><input type="checkbox" name="OneWeekAgo">One Week Ago</p>
+								<p class="text2-properties"><input type="checkbox" name="TwoWeekAgo">Two Weeks Ago</p>
+								<p class="text1-properties">Frequency:</p>
+								<p class="text2-properties"><input type="checkbox" name="MoreThanTwenty">>20</p>
+								<p class="text2-properties"><input type="checkbox" name="TenToTwenty">10-20</p>
+								<p class="text2-properties"><input type="checkbox" name="LessThanTen"><10</p>
+							<input class="submit-button" type="submit" value="search"/>
+						</form>
+					</div>
+				</nav>
+				<button class="close-button" id="close-button">Close Menu</button>
+				<div class="morph-shape" id="morph-shape" data-morph-open="M-7.312,0H15c0,0,66,113.339,66,399.5C81,664.006,15,800,15,800H-7.312V0z;M-7.312,0H100c0,0,0,113.839,0,400c0,264.506,0,400,0,400H-7.312V0z">
+					<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 100 800" preserveAspectRatio="none">
+					<path d="M-7.312,0H0c0,0,0,113.839,0,400c0,264.506,0,400,0,400h-7.312V0z"/>
+					</svg>
+				</div>
+
+			</div>
+			<button class="testbutton" id="open-button">Open Menu</button>
+
+			<!-- The path link will dynimicly add by using js-->
+
+			<ul id="pathLink" >
+				<a style="float: left; padding-left: 5px;" id="topTab">topTab</a>
+				<a style="float: left; padding-left: 5px;">&gt;</a>
+				<a style="float: left; padding-left: 5px;" id="contentTab">contentTab</a>
+			</ul>
+
+			<!--Content-->
+			<section id="content" class="content-wrap container">
+				
+				<ul id="image-block" class="image-block row">
+					<li class="span3" id="square1">
+						<a>
+							<img id="contentFirstImage" src="./image/facebook.jpg">
+							<!--<div style="display: block; left: 100%; top: 0px; overflow: hidden; transition: all 300ms ease; -webkit-transition: all 300ms ease;"><span>Today</span></div>-->
+						</a>
+					</li>
+
+					<li class="span3" id="square2">
+						<a href="">
+							<img id="contentSecondImage" src="./image/twitter.jpg">
+						</a>
+					</li>
+
+					<li class="span3" id="square3">
+						<a href="">
+							<img id="contentThirdImage" src="./image/tumblr.png" >
+						</a>
+					</li>
+
+					<li class="span3" id="square4">
+						<a href="">
+							<img id="contentOthersImage" src="./image/others.gif" >
+						</a>
+					</li>
+				</ul>
+				
+
+			</section>
+
+		</content>
+
+	<script src="js/classie.js"></script>
+	<script src="js/main4.js"></script>
+	<script src="js/second.js"></script>
+	<!--<script type="text/javascript">-->
+
+		<!--function Request() {-->
+			<!--var url = document.location.href;-->
+			<!--var arrStr = url.substring(url.indexOf("?") + 1).split("&");-->
+			<!--// return arrStr;-->
+			<!--var topTab = arrStr[0];-->
+			<!--//topTab = topTab.split("=");-->
+			<!--var contentTab = arrStr[1];-->
+			<!--console.log(topTab);-->
+			<!--console.log(contentTab);-->
+
+			<!--// if the current page is socialnetwork result-->
+			<!--if(topTab == "topTab=category" && contentTab == "contentTab=socialNetwork"){-->
+				<!--console.log("change the content of this page to fit socialNetwork");-->
+				<!--document.getElementById("contentFirstImage").src="./image/facebook.jpg";-->
+				<!--document.getElementById("contentSecondImage").src="./image/twitter.jpg";-->
+				<!--document.getElementById("contentThirdImage").src="./image/tumblr.png";-->
+				<!--document.getElementById("contentOthersImage").src="./image/others.gif";-->
+			<!--}else if(topTab=="topTab=category" && contentTab == "contentTab=shopping"){-->
+				<!--console.log("change the content of this page to fit shopping");-->
+				<!--document.getElementById("contentFirstImage").src="./image/amazon.jpg";-->
+				<!--document.getElementById("contentSecondImage").src="./image/ebay.png";-->
+				<!--document.getElementById("contentThirdImage").src="./image/best_buy.jpg";-->
+				<!--document.getElementById("contentOthersImage").src="./image/others.gif";-->
+			<!--}-->
+
+
+
+
+		<!--}-->
+
+		<!--Request();-->
+
+	<!--</script>-->
+
+	</body>
+</html>
