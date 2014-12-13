@@ -34,6 +34,7 @@ function Request() {
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     // change the path list
     if(topTab == "category"){
         document.getElementById("topTab").innerHTML = topTab.toUpperCase();
@@ -50,6 +51,8 @@ function Request() {
 
 
     document.getElementById("contentTab").innerHTML = contentTab.toUpperCase();
+=======
+>>>>>>> FETCH_HEAD
 =======
 >>>>>>> FETCH_HEAD
 
@@ -126,6 +129,7 @@ function findDomainsOfCategory(category){
             $("#square3 a").attr("href", "./ListResult.html?domain="+top3Domains[2]);
             $("#square4 a").attr("href", "./ListResult.html?categoryStr="+category);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             //set images
             if($.inArray(top3Domains[0], websiteImages) != -1) {
@@ -151,6 +155,8 @@ function findDomainsOfCategory(category){
             $("#square3 a div").html(top3Domains[2]);
 
 
+=======
+>>>>>>> FETCH_HEAD
 =======
 >>>>>>> FETCH_HEAD
         });
@@ -369,6 +375,7 @@ function findDomainsOfFrequency(frequency){
             $("#square2 a").attr("href", "./ListResult.html?domain="+top3Domains[1]+"&frequency="+frequency);
             $("#square3 a").attr("href", "./ListResult.html?domain="+top3Domains[2]+"&frequency="+frequency);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             //set images
             if($.inArray(top3Domains[0], websiteImages) != -1) {
@@ -392,6 +399,8 @@ function findDomainsOfFrequency(frequency){
             $("#square1 a div").html(top3Domains[0]);
             $("#square2 a div").html(top3Domains[1]);
             $("#square3 a div").html(top3Domains[2]);
+=======
+>>>>>>> FETCH_HEAD
 =======
 >>>>>>> FETCH_HEAD
         });
